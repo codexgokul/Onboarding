@@ -1,0 +1,691 @@
+export const seedData = {
+  employees: [
+    {
+      id: "emp-001",
+      fullName: "Sarah Jenkins",
+      personalEmail: "sarah.j.design@example.com",
+      corporateEmail: "sarah.jenkins@acmecorp.io",
+      jobTitle: "Senior Product Designer",
+      department: "Design",
+      seniority: "Senior",
+      manager: "Elena Rostova (Design Director)",
+      startDate: "2026-11-20",
+      phone: "+1 (555) 234-5678",
+      location: "San Francisco, CA (Hybrid)",
+      status: "In Progress",
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+      hardwarePreference: "MacBook Pro 16\" M3 Max + Studio Display",
+      emergencyContact: {
+        name: "Marcus Jenkins",
+        relation: "Spouse",
+        phone: "+1 (555) 987-6543"
+      },
+      createdAt: "2026-11-10T09:00:00Z"
+    },
+    {
+      id: "emp-002",
+      fullName: "David Chen",
+      personalEmail: "dchen.dev99@example.com",
+      corporateEmail: "david.chen@acmecorp.io",
+      jobTitle: "Full Stack Software Engineer",
+      department: "Engineering",
+      seniority: "Mid-Level",
+      manager: "Alexandre Dupont (VP of Engineering)",
+      startDate: "2026-11-18",
+      phone: "+1 (555) 345-6789",
+      location: "Austin, TX (Remote)",
+      status: "In Progress",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      hardwarePreference: "MacBook Pro 14\" M3 Pro + Dell 32\" 4K",
+      emergencyContact: {
+        name: "Mei Chen",
+        relation: "Mother",
+        phone: "+1 (555) 876-5432"
+      },
+      createdAt: "2026-11-12T14:30:00Z"
+    },
+    {
+      id: "emp-003",
+      fullName: "Amina Al-Mansoor",
+      personalEmail: "amina.mansoor@example.com",
+      corporateEmail: "amina.mansoor@acmecorp.io",
+      jobTitle: "Technical Product Manager",
+      department: "Product",
+      seniority: "Lead",
+      manager: "Priya Sharma (Chief Product Officer)",
+      startDate: "2026-11-05",
+      phone: "+1 (555) 456-7890",
+      location: "New York, NY (Onsite)",
+      status: "Completed",
+      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      hardwarePreference: "ThinkPad X1 Carbon Gen 12",
+      emergencyContact: {
+        name: "Tariq Al-Mansoor",
+        relation: "Brother",
+        phone: "+1 (555) 765-4321"
+      },
+      createdAt: "2026-10-25T11:00:00Z"
+    },
+    {
+      id: "emp-004",
+      fullName: "Liam O'Connor",
+      personalEmail: "liam.oconnor@example.com",
+      corporateEmail: "",
+      jobTitle: "Security & Compliance Analyst",
+      department: "Security",
+      seniority: "Junior",
+      manager: "Jordan Vance (Head of Information Security)",
+      startDate: "2026-12-01",
+      phone: "+1 (555) 567-8901",
+      location: "Seattle, WA (Remote)",
+      status: "Not Started",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      hardwarePreference: "MacBook Pro 16\" M3 Max",
+      emergencyContact: {
+        name: "Fiona O'Connor",
+        relation: "Sister",
+        phone: "+1 (555) 654-3210"
+      },
+      createdAt: "2026-11-15T16:20:00Z"
+    }
+  ],
+  tasks: [
+    {
+      id: "task-101",
+      employeeId: "emp-001",
+      phase: "Pre-boarding",
+      title: "Sign Employment Agreement & NDA",
+      description: "Review and electronically sign official offer letter and non-disclosure agreement.",
+      category: "HR Paperwork",
+      assignedTo: "Employee",
+      validatorRole: "HR Specialist",
+      priority: "High",
+      dueDate: "2026-11-19",
+      status: "Validated",
+      proof: {
+        type: "document",
+        title: "Signed_Offer_NDA_S_Jenkins.pdf",
+        url: "https://docs.acmecorp.internal/contracts/emp-001-signed.pdf",
+        notes: "Signed via DocuSign envelope #DS-88291"
+      },
+      validation: {
+        isValidated: true,
+        validatedBy: "Rachel Green (Senior HR Generalist)",
+        validatedAt: "2026-11-14T10:15:00Z",
+        comments: "DocuSign audit trail verified. All pages countersigned."
+      }
+    },
+    {
+      id: "task-102",
+      employeeId: "emp-001",
+      phase: "Pre-boarding",
+      title: "Background Verification Screening",
+      description: "Complete Checkr background check authorization and address history.",
+      category: "HR Paperwork",
+      assignedTo: "HR",
+      validatorRole: "HR Specialist",
+      priority: "High",
+      dueDate: "2026-11-18",
+      status: "Validated",
+      proof: {
+        type: "link",
+        title: "Checkr Report #CK-99410",
+        url: "https://dashboard.checkr.com/reports/CK-99410",
+        notes: "Criminal and education check cleared with zero flags."
+      },
+      validation: {
+        isValidated: true,
+        validatedBy: "Rachel Green (Senior HR Generalist)",
+        validatedAt: "2026-11-13T16:45:00Z",
+        comments: "Background check fully cleared."
+      }
+    },
+    {
+      id: "task-103",
+      employeeId: "emp-001",
+      phase: "Day 1 Setup",
+      title: "Corporate Email Provisioning & Initial Login",
+      description: "Activate sarah.jenkins@acmecorp.io, configure Google Workspace, and enable mandatory 2FA.",
+      category: "IT Setup",
+      assignedTo: "IT Support",
+      validatorRole: "IT Administrator",
+      priority: "High",
+      dueDate: "2026-11-20",
+      status: "Under Validation",
+      proof: {
+        type: "screenshot",
+        title: "Google_2FA_Enabled_Confirmation.png",
+        url: "https://storage.acmecorp.internal/proofs/2fa-sjenkins.png",
+        notes: "Password changed, YubiKey hardware token paired and Google Authenticator backup configured."
+      },
+      validation: {
+        isValidated: false,
+        validatedBy: null,
+        validatedAt: null,
+        comments: "Pending IT confirmation of enrolled security key."
+      }
+    },
+    {
+      id: "task-104",
+      employeeId: "emp-001",
+      phase: "Day 1 Setup",
+      title: "Figma Enterprise & Design Tokens Setup",
+      description: "Accept Figma invite, join the Design System workspace, and sync local font packages.",
+      category: "Tools & Permissions",
+      assignedTo: "Employee",
+      validatorRole: "Hiring Manager",
+      priority: "Medium",
+      dueDate: "2026-11-21",
+      status: "In Progress",
+      proof: null,
+      validation: {
+        isValidated: false,
+        validatedBy: null,
+        validatedAt: null,
+        comments: null
+      }
+    },
+    {
+      id: "task-105",
+      employeeId: "emp-001",
+      phase: "Week 1",
+      title: "Security & SOC2 Compliance Training",
+      description: "Watch 45-minute KnowBe4 security awareness modules and score 90%+ on phishing test.",
+      category: "Compliance",
+      assignedTo: "Employee",
+      validatorRole: "Security Officer",
+      priority: "High",
+      dueDate: "2026-11-27",
+      status: "Pending",
+      proof: null,
+      validation: {
+        isValidated: false,
+        validatedBy: null,
+        validatedAt: null,
+        comments: null
+      }
+    },
+    {
+      id: "task-106",
+      employeeId: "emp-001",
+      phase: "Week 1",
+      title: "1-on-1 Introduction with Team Mentor",
+      description: "Schedule and complete a 45-min kickoff sync with designated mentor Maya Lin.",
+      category: "Team Integration",
+      assignedTo: "Employee",
+      validatorRole: "Hiring Manager",
+      priority: "Low",
+      dueDate: "2026-11-25",
+      status: "Pending",
+      proof: null,
+      validation: {
+        isValidated: false,
+        validatedBy: null,
+        validatedAt: null,
+        comments: null
+      }
+    },
+    {
+      id: "task-201",
+      employeeId: "emp-002",
+      phase: "Pre-boarding",
+      title: "Sign Employment Agreement & IP Assignment",
+      description: "Review and electronically sign offer letter, proprietary information agreement, and NDA.",
+      category: "HR Paperwork",
+      assignedTo: "Employee",
+      validatorRole: "HR Specialist",
+      priority: "High",
+      dueDate: "2026-11-17",
+      status: "Validated",
+      proof: {
+        type: "document",
+        title: "Signed_Offer_David_Chen.pdf",
+        url: "https://docs.acmecorp.internal/contracts/emp-002-signed.pdf",
+        notes: "Signed via DocuSign envelope #DS-99120"
+      },
+      validation: {
+        isValidated: true,
+        validatedBy: "Rachel Green (Senior HR Generalist)",
+        validatedAt: "2026-11-14T11:20:00Z",
+        comments: "All paperwork complete."
+      }
+    },
+    {
+      id: "task-202",
+      employeeId: "emp-002",
+      phase: "Day 1 Setup",
+      title: "Email Access & Google Workspace Provisioning",
+      description: "Provision david.chen@acmecorp.io, configure Google Workspace groups (eng-all, backend-guild).",
+      category: "IT Setup",
+      assignedTo: "IT Support",
+      validatorRole: "IT Administrator",
+      priority: "High",
+      dueDate: "2026-11-18",
+      status: "Under Validation",
+      proof: {
+        type: "text",
+        title: "Google Admin User Created",
+        url: "",
+        notes: "Google Workspace user activated, primary alias david.chen@, added to dev mailing lists."
+      },
+      validation: {
+        isValidated: false,
+        validatedBy: null,
+        validatedAt: null,
+        comments: "IT Admin reviewing 2FA enrollment verification."
+      }
+    },
+    {
+      id: "task-203",
+      employeeId: "emp-002",
+      phase: "Day 1 Setup",
+      title: "GitHub Enterprise Organization Access",
+      description: "Join org 'acme-technologies' with 2FA, configure SSH keys and GPG commit signing.",
+      category: "Tools & Permissions",
+      assignedTo: "IT Support",
+      validatorRole: "IT Administrator",
+      priority: "High",
+      dueDate: "2026-11-19",
+      status: "In Progress",
+      proof: null,
+      validation: {
+        isValidated: false,
+        validatedBy: null,
+        validatedAt: null,
+        comments: null
+      }
+    },
+    {
+      id: "task-204",
+      employeeId: "emp-002",
+      phase: "Week 1",
+      title: "AWS Staging Environment Credentials Setup",
+      description: "Configure AWS IAM Identity Center (SSO) role for developer sandbox.",
+      category: "Tools & Permissions",
+      assignedTo: "IT Support",
+      validatorRole: "DevOps Lead",
+      priority: "High",
+      dueDate: "2026-11-22",
+      status: "Pending",
+      proof: null,
+      validation: {
+        isValidated: false,
+        validatedBy: null,
+        validatedAt: null,
+        comments: null
+      }
+    },
+    {
+      id: "task-205",
+      employeeId: "emp-002",
+      phase: "Week 1",
+      title: "Submit First Starter Bugfix / PR in Staging",
+      description: "Clone monorepo, run local dev environment, build services, and submit first buddy PR.",
+      category: "Training",
+      assignedTo: "Employee",
+      validatorRole: "Hiring Manager",
+      priority: "Medium",
+      dueDate: "2026-11-25",
+      status: "Pending",
+      proof: null,
+      validation: {
+        isValidated: false,
+        validatedBy: null,
+        validatedAt: null,
+        comments: null
+      }
+    },
+    {
+      id: "task-301",
+      employeeId: "emp-003",
+      phase: "Pre-boarding",
+      title: "Executive Onboarding Paperwork",
+      description: "Complete all compliance, confidential disclosures, and benefits elections.",
+      category: "HR Paperwork",
+      assignedTo: "Employee",
+      validatorRole: "HR Specialist",
+      priority: "High",
+      dueDate: "2026-11-04",
+      status: "Validated",
+      proof: {
+        type: "document",
+        title: "Amina_Executive_Package_Signed.pdf",
+        url: "https://docs.acmecorp.internal/contracts/emp-003-signed.pdf",
+        notes: "Verified."
+      },
+      validation: {
+        isValidated: true,
+        validatedBy: "Rachel Green (Senior HR Generalist)",
+        validatedAt: "2026-11-04T15:00:00Z",
+        comments: "Complete."
+      }
+    },
+    {
+      id: "task-302",
+      employeeId: "emp-003",
+      phase: "Day 1 Setup",
+      title: "Product Suite & Analytics Access",
+      description: "Jira Product Discovery, Amplitude Analytics, Mixpanel, and Productboard.",
+      category: "Tools & Permissions",
+      assignedTo: "IT Support",
+      validatorRole: "IT Administrator",
+      priority: "High",
+      dueDate: "2026-11-06",
+      status: "Validated",
+      proof: {
+        type: "link",
+        title: "Jira & Amplitude Seats Confirmed",
+        url: "https://acmecorp.atlassian.net",
+        notes: "Seats allocated and SSO mapped."
+      },
+      validation: {
+        isValidated: true,
+        validatedBy: "Marcus Shaw (IT Operations Lead)",
+        validatedAt: "2026-11-06T14:30:00Z",
+        comments: "All product tool access granted and validated."
+      }
+    },
+    {
+      id: "task-303",
+      employeeId: "emp-003",
+      phase: "Month 1",
+      title: "30-Day New Hire Review & Goal Finalization",
+      description: "Conduct 30-day performance check-in and finalize quarterly OKRs.",
+      category: "Management",
+      assignedTo: "Hiring Manager",
+      validatorRole: "Hiring Manager",
+      priority: "Medium",
+      dueDate: "2026-11-15",
+      status: "Validated",
+      proof: {
+        type: "document",
+        title: "30_Day_Review_Summary_Amina.pdf",
+        url: "https://hr.acmecorp.internal/reviews/30d-emp-003.pdf",
+        notes: "Goals agreed and signed off by CPO."
+      },
+      validation: {
+        isValidated: true,
+        validatedBy: "Priya Sharma (Chief Product Officer)",
+        validatedAt: "2026-11-15T16:00:00Z",
+        comments: "Exceptional ramp-up. Onboarding officially completed!"
+      }
+    }
+  ],
+  emailRequests: [
+    {
+      id: "emr-001",
+      employeeId: "emp-001",
+      employeeName: "Sarah Jenkins",
+      department: "Design",
+      requestedEmail: "sarah.jenkins@acmecorp.io",
+      aliases: ["sarah.j@acmecorp.io", "sjenkins@acmecorp.io"],
+      distributionLists: [
+        "all-employees@acmecorp.io",
+        "design-team@acmecorp.io",
+        "product-design-critique@acmecorp.io"
+      ],
+      mailboxTier: "Business Standard (2TB Storage)",
+      require2FA: true,
+      securityEnforcement: "Hardware FIDO2 Security Key Mandatory",
+      status: "Approved",
+      requestedBy: "Rachel Green (HR)",
+      requestedAt: "2026-11-10T10:00:00Z",
+      approvedBy: "Marcus Shaw (IT Lead)",
+      approvedAt: "2026-11-11T14:20:00Z",
+      provisionedAt: "2026-11-12T09:30:00Z",
+      notes: "Temporary activation password generated and securely sent via 1Password share."
+    },
+    {
+      id: "emr-002",
+      employeeId: "emp-002",
+      employeeName: "David Chen",
+      department: "Engineering",
+      requestedEmail: "david.chen@acmecorp.io",
+      aliases: ["david.c@acmecorp.io", "dchen@acmecorp.io"],
+      distributionLists: [
+        "all-employees@acmecorp.io",
+        "engineering-all@acmecorp.io",
+        "backend-guild@acmecorp.io",
+        "oncall-alerts@acmecorp.io"
+      ],
+      mailboxTier: "Business Standard (2TB Storage)",
+      require2FA: true,
+      securityEnforcement: "Authenticator App / Passkey",
+      status: "Approved",
+      requestedBy: "Rachel Green (HR)",
+      requestedAt: "2026-11-12T15:00:00Z",
+      approvedBy: "Marcus Shaw (IT Lead)",
+      approvedAt: "2026-11-13T10:00:00Z",
+      provisionedAt: "2026-11-13T11:15:00Z",
+      notes: "Account active. Sent onboarding credentials to personal email."
+    },
+    {
+      id: "emr-003",
+      employeeId: "emp-004",
+      employeeName: "Liam O'Connor",
+      department: "Security",
+      requestedEmail: "liam.oconnor@acmecorp.io",
+      aliases: ["loconnor@acmecorp.io"],
+      distributionLists: [
+        "all-employees@acmecorp.io",
+        "security-ops@acmecorp.io",
+        "soc-incident-response@acmecorp.io"
+      ],
+      mailboxTier: "Enterprise Plus (Unlimited Vault)",
+      require2FA: true,
+      securityEnforcement: "Strict Hardware Security Key (YubiKey 5C NFC)",
+      status: "Pending Review",
+      requestedBy: "Jordan Vance (Manager)",
+      requestedAt: "2026-11-15T16:30:00Z",
+      approvedBy: null,
+      approvedAt: null,
+      provisionedAt: null,
+      notes: "Awaiting final IT security lead sign-off before provisioning corporate mailbox."
+    }
+  ],
+  softwareCatalog: [
+    {
+      id: "sw-slack",
+      name: "Slack Enterprise",
+      category: "Communication",
+      icon: "MessageSquare",
+      color: "emerald",
+      roles: ["Standard Member", "Channel Admin", "Guest"],
+      defaultDepartments: ["Engineering", "Product", "Design", "Security", "HR", "Sales", "Marketing"]
+    },
+    {
+      id: "sw-google",
+      name: "Google Workspace & Docs",
+      category: "Productivity",
+      icon: "Mail",
+      color: "blue",
+      roles: ["Standard User", "OU Admin"],
+      defaultDepartments: ["Engineering", "Product", "Design", "Security", "HR", "Sales", "Marketing"]
+    },
+    {
+      id: "sw-github",
+      name: "GitHub Enterprise",
+      category: "Development",
+      icon: "Code2",
+      color: "purple",
+      roles: ["Read-Only", "Triage", "Write / Contributor", "Org Admin"],
+      defaultDepartments: ["Engineering", "Security"]
+    },
+    {
+      id: "sw-jira",
+      name: "Jira & Confluence Cloud",
+      category: "Project Management",
+      icon: "CheckSquare",
+      color: "sky",
+      roles: ["Product User", "Developer", "Project Admin"],
+      defaultDepartments: ["Engineering", "Product", "Design", "Security"]
+    },
+    {
+      id: "sw-figma",
+      name: "Figma Enterprise",
+      category: "Design",
+      icon: "PenTool",
+      color: "pink",
+      roles: ["Viewer-Restricted", "Editor", "Org Admin"],
+      defaultDepartments: ["Design", "Product"]
+    },
+    {
+      id: "sw-aws",
+      name: "AWS Cloud Console",
+      category: "Cloud Infrastructure",
+      icon: "Cloud",
+      color: "amber",
+      roles: ["Read-Only Console", "Developer Sandbox", "Staging Operator", "Prod Admin"],
+      defaultDepartments: ["Engineering", "Security"]
+    },
+    {
+      id: "sw-notion",
+      name: "Notion Knowledge Base",
+      category: "Documentation",
+      icon: "BookOpen",
+      color: "stone",
+      roles: ["Can Read", "Can Edit", "Workspace Admin"],
+      defaultDepartments: ["Engineering", "Product", "Design", "HR", "Security"]
+    },
+    {
+      id: "sw-1password",
+      name: "1Password Business",
+      category: "Security",
+      icon: "ShieldCheck",
+      color: "indigo",
+      roles: ["Standard User", "Vault Manager"],
+      defaultDepartments: ["Engineering", "Product", "Design", "Security", "HR"]
+    },
+    {
+      id: "sw-datadog",
+      name: "Datadog Observability",
+      category: "Monitoring",
+      icon: "Activity",
+      color: "violet",
+      roles: ["Read-Only Dashboards", "Standard User", "Admin"],
+      defaultDepartments: ["Engineering", "Security"]
+    }
+  ],
+  softwarePermissions: [
+    {
+      id: "perm-001",
+      employeeId: "emp-001",
+      softwareId: "sw-figma",
+      softwareName: "Figma Enterprise",
+      role: "Editor",
+      licenseType: "Full Editor Seat ($75/mo)",
+      status: "Active",
+      assignedBy: "Marcus Shaw (IT)",
+      assignedAt: "2026-11-12T10:00:00Z",
+      justification: "Primary tool for product design work and design system library updates.",
+      securityApproval: true
+    },
+    {
+      id: "perm-002",
+      employeeId: "emp-001",
+      softwareId: "sw-slack",
+      softwareName: "Slack Enterprise",
+      role: "Standard Member",
+      licenseType: "Enterprise Grid",
+      status: "Active",
+      assignedBy: "Marcus Shaw (IT)",
+      assignedAt: "2026-11-11T09:00:00Z",
+      justification: "Company-wide collaboration channel.",
+      securityApproval: true
+    },
+    {
+      id: "perm-003",
+      employeeId: "emp-001",
+      softwareId: "sw-notion",
+      softwareName: "Notion Knowledge Base",
+      role: "Can Edit",
+      licenseType: "Enterprise Workspace Member",
+      status: "Active",
+      assignedBy: "Rachel Green (HR)",
+      assignedAt: "2026-11-11T09:15:00Z",
+      justification: "Design specs and documentation.",
+      securityApproval: true
+    },
+    {
+      id: "perm-004",
+      employeeId: "emp-002",
+      softwareId: "sw-github",
+      softwareName: "GitHub Enterprise",
+      role: "Write / Contributor",
+      licenseType: "Enterprise Cloud Seat",
+      status: "Active",
+      assignedBy: "Marcus Shaw (IT)",
+      assignedAt: "2026-11-13T14:00:00Z",
+      justification: "Required for code repository commits and PR reviews.",
+      securityApproval: true
+    },
+    {
+      id: "perm-005",
+      employeeId: "emp-002",
+      softwareId: "sw-aws",
+      softwareName: "AWS Cloud Console",
+      role: "Developer Sandbox",
+      licenseType: "IAM Identity Center SSO",
+      status: "Pending Approval",
+      assignedBy: "Alexandre Dupont (Manager)",
+      assignedAt: "2026-11-14T09:30:00Z",
+      justification: "Needed for testing microservice deployments in staging sandbox.",
+      securityApproval: false
+    },
+    {
+      id: "perm-006",
+      employeeId: "emp-004",
+      softwareId: "sw-datadog",
+      softwareName: "Datadog Observability",
+      role: "Standard User",
+      licenseType: "Pro Tier",
+      status: "Pending Approval",
+      assignedBy: "Jordan Vance (Manager)",
+      assignedAt: "2026-11-15T16:35:00Z",
+      justification: "Security monitoring, audit trail inspection, and alert investigation.",
+      securityApproval: false
+    }
+  ],
+  activityLogs: [
+    {
+      id: "act-101",
+      timestamp: "2026-11-15T16:35:00Z",
+      action: "Permission Requested",
+      actor: "Jordan Vance (Manager)",
+      target: "Liam O'Connor - Datadog Observability",
+      details: "Requested Standard User role for Security audit investigation."
+    },
+    {
+      id: "act-102",
+      timestamp: "2026-11-15T16:20:00Z",
+      action: "Profile Created",
+      actor: "Rachel Green (HR)",
+      target: "Liam O'Connor (Security & Compliance Analyst)",
+      details: "Initiated onboarding pipeline with start date Dec 1, 2026."
+    },
+    {
+      id: "act-103",
+      timestamp: "2026-11-15T16:00:00Z",
+      action: "Task Validated",
+      actor: "Priya Sharma (Chief Product Officer)",
+      target: "Amina Al-Mansoor - 30-Day New Hire Review",
+      details: "Approved final milestone. Status changed to Completed (100%)."
+    },
+    {
+      id: "act-104",
+      timestamp: "2026-11-14T11:20:00Z",
+      action: "Task Validated",
+      actor: "Rachel Green (Senior HR Generalist)",
+      target: "David Chen - Sign Employment Agreement & IP Assignment",
+      details: "DocuSign package verified and filed in HR archive."
+    },
+    {
+      id: "act-105",
+      timestamp: "2026-11-13T11:15:00Z",
+      action: "Email Provisioned",
+      actor: "Marcus Shaw (IT Lead)",
+      target: "David Chen (david.chen@acmecorp.io)",
+      details: "Provisioned mailbox and synced 4 distribution lists."
+    }
+  ]
+};
